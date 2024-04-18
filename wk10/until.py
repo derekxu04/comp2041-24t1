@@ -10,7 +10,7 @@ def main():
     try:
         address = int(address)
     except ValueError:
-        address = re.compile(address)
+        address = re.compile(address[1:-1])
 
     for line_number, line_content in enumerate(sys.stdin, start=1):
         if line_content[-1] == '\n':
